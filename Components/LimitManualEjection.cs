@@ -73,7 +73,7 @@ namespace PanicSystem.Components
             var stack = new List<CodeInstruction>
             {
                 new CodeInstruction(OpCodes.Ldarg_0), // this
-                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(SelectionState), "get_SelectedMech")), // Mech SelectionState.SelectedMech
+                new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(SelectionState), "get_SelectedActor")), // Mech SelectionState.SelectedMech
                 new CodeInstruction(OpCodes.Ldc_I4_0, 0),
                 new CodeInstruction(OpCodes.Ldc_I4, int.MaxValue),
                 new CodeInstruction(OpCodes.Call, AccessTools.Method(typeof(Random), "Range", new[] {typeof(int), typeof(int)})), // Random.Range(0, int.MaxValue);
